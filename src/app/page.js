@@ -1,8 +1,13 @@
-import "../styles/global.css";
-import Animation from "../components/Animation";
-import Menu from "../components/Menu";
+'use client';
+
+import { useState } from 'react';
+import Animation from '../components/Animation';
+import Menu      from '../components/Menu';
+import Projects  from '../components/Projects';
 
 export default function Home() {
+  const [showProjects, setShowProjects] = useState(false);
+
   return (
     <div className="container">
       <header id="wai">
@@ -10,47 +15,12 @@ export default function Home() {
         <h2>Software Developer</h2>
       </header>
 
-      <Menu />
-      <Animation />
+      <Menu
+        onHome={() => setShowProjects(false)}
+        onProjects={() => setShowProjects(true)}
+      />
 
-      <section className="projects hidden">
-        <ul>
-        <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-                
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-                
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-
-                <li>
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                </li>
-        </ul>
-      </section>
+      {showProjects ? <Projects /> : <Animation />}
     </div>
   );
 }

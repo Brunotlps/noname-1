@@ -1,15 +1,14 @@
-"use client";
-import { useEffect } from "react";
+'use client';
 
-export default function Menu() {
-  useEffect(() => {
-    require("../scripts/projects");
-  }, []);
-
+export default function Menu({ onHome, onProjects }) {
   return (
     <nav className="menu">
-      <button className="menu-button">Home</button>
-      <button className="menu-button">Projects</button>
+      <button className="menu-button" onClick={onHome}>
+        Home
+      </button>
+      <button className="menu-button" onClick={onProjects}>
+        Projects
+      </button>
     </nav>
   );
 }

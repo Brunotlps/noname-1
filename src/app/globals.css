@@ -1,0 +1,176 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #4a484d, #252525,  #000000);
+
+}
+
+.container {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: glow 3s infinite alternate;
+  
+}
+
+
+#wai{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.719); 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wai h1 {
+  font-size: 36px; 
+  font-weight: 250; 
+}
+#wai h2 {
+  font-size: 18px; 
+  font-weight: 350; 
+}
+
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-button {
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2 ease;
+}
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  transform: scale(1.05);
+
+}
+
+.projects {
+  padding-right: 20px;
+  position: absolute;
+  width: 60vh;
+  height: 45vh;
+  overflow-y: auto;
+  color: white;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.projects.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.projects h3 {
+  margin-bottom: 20px;
+  font-size: 36px; 
+  font-weight: 250;
+}
+
+.projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.projects li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+  background-color: rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2 ease;
+}
+
+.projects li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.projects::-webkit-scrollbar {
+  width: 6px;
+}
+.projects::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+
+@keyframes glow {
+  0% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); }
+  100% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 90vw;
+      height: 90vh;
+  }
+
+  .projects {
+      width: 90vh;
+      height: 60vh;
+      top: 100px;
+      left: 10px;
+      right: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

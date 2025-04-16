@@ -1,7 +1,8 @@
-import '../styles/global.css';
+import './globals.css';
+
 
 export const metadata = {
-  title: 'Portfólio de Bruno',
+  title: 'Bruno Teixeira',
   description: 'Projetos e experiências de Bruno',
 };
 
