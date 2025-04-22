@@ -6,6 +6,7 @@ import p5 from 'p5';
 export default function Animation() {
   const containerRef = useRef(null);
   const p5InstanceRef = useRef(null);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     // Define aqui todo o seu sketch, mas usando a instância s
@@ -66,11 +67,15 @@ export default function Animation() {
         for (let i = 0; i < initial; i++) {
           points.push(new Point(s.random(s.width), s.random(s.height)));
         }
-        setInterval(adjustPoints, 5000);
+        intervalRef.current = setInterval(adjustPoints, 5000);
       };
 
       s.draw = () => {
+        s.fill(0, 0, 0, 10);
+        s.rect(0, 0, s.width, s.height);
+
         s.clear();
+
         for (const p of points) {
           p.move();
           p.display();
@@ -84,6 +89,7 @@ export default function Animation() {
 
     return () => {
       // cleanup ao desmontar
+      clearInterval(intervalRef.current);
       p5InstanceRef.current.remove();
     };
   }, []);

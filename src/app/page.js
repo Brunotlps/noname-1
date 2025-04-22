@@ -9,7 +9,7 @@ export default function Home() {
   const [showProjects, setShowProjects] = useState(false);
 
   return (
-    <div className="container">
+    <main className="container">
       <header id="wai">
         <h1>Bruno Teixeira</h1>
         <h2>Software Developer</h2>
@@ -21,6 +21,6 @@ export default function Home() {
       />
 
       {showProjects ? <Projects /> : <Animation />}
-    </div>
+    </main>
   );
 }

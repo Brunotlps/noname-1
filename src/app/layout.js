@@ -1,6 +1,9 @@
-import './globals.css';
 
 
+import '../styles/globals.css';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Bruno Teixeira',
   description: 'Projetos e experiências de Bruno',
@@ -9,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body className={inter.className}>
+          {children}
+      </body>
     </html>
   );
 }

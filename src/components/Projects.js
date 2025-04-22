@@ -1,23 +1,14 @@
 'use client';
 
+import projectsData from '../data/projects.json'
+
+
 export default function Projects() {
-  const items = [
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    { title: 'Project ', desc: 'Description' },
-    // … adicione quantos quiser
-  ];
 
   return (
     <section className="projects visible">
       <ul>
-        {items.map((p, i) => (
+        {projectsData.map((p, i) => (
           <li key={i} className="project-item">
             <h4>{p.title}</h4>
             <p>{p.desc}</p>
