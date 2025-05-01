@@ -23,14 +23,20 @@ export default function Home() {
         />
       </aside>
 
-      <main className='content'>
-        {showProjects ? <Projects /> : (
-          <>
-            <Animation />
-            <Presentation />
-          </>
-        )}
+      <main className="animation-container">
+        <Animation />
       </main>
+
+      {showProjects ? (
+        <div className="projects-panel">
+          <Projects />
+        </div>
+      ) : (
+        <div className="presentation-div">
+          <Presentation />
+        </div>
+)} 
+     
     </div>
   );
 }

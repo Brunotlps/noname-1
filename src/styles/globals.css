@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: radial-gradient(circle at center, #4a484d, #252525,  #000000);
-
+  background: radial-gradient(circle at center, #060641, #020007, #000000);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .container {
@@ -24,14 +22,48 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   animation: glow 3s infinite alternate;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
+}
+
+.animation-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  z-index: 0;
+}
+
+.presentation-div {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.719); 
+  font-size: 0.75rem;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.projects-panel {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
 }
 
 .sidebar {
@@ -42,45 +74,30 @@ body {
   padding: 20px;
 }
 
-
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 20px;
-}
-
-.content.projects-view {
-  justify-content: flex-start;
-  padding-left: 40px;
-}
-
-#wai{
+#wai {
   position: absolute;
   top: 10px;
   left: 10px;
   padding: 10px;
   color: rgba(255, 255, 255, 0.719); 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #wai h1 {
   font-size: 2.2rem; 
   font-weight: 250; 
 }
+
 #wai h2 {
   font-size: 1rem; 
   font-weight: 350; 
 }
-
 
 .menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .menu-button {
   width: 140px;
   height: 45px;
@@ -90,17 +107,15 @@ body {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease, transform 0.2 ease;
-  justify-content: left;
+  transition: all 0.3s ease, transform 0.2s ease;
 }
+
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 10px rgba(255,255,255,0.3);
   transform: scale(1.05);
-
 }
 
 .animation {
@@ -116,25 +131,16 @@ body {
   display: block;
 }
 
-.presentation {
-  flex: 1 1 250px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .projects {
   flex: 1 1 300px;
-  max-height: 60vh;
   max-width: 1000px;
+  max-height: 60vh;
   overflow-y: auto;
   color: whitesmoke;
   opacity: 0;
   transform: scale(0.98);
   transition: opacity 1s ease, transform 1s ease;
   pointer-events: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .projects.visible {
@@ -157,10 +163,10 @@ body {
   margin-bottom: 20px;
   padding: 10px;
   border: 0.5px solid rgba(255, 255, 255, 0.5);
-  border-radius: 1px;
+  border-radius: 4px;
   background-color: rgba(255,255,255,0.05);
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2 ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .projects li:hover {
@@ -172,64 +178,46 @@ body {
 .projects::-webkit-scrollbar {
   width: 6px;
 }
+
 .projects::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-
-
-
-
 @keyframes glow {
-  0% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
-  50% { box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); }
-  100% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
+  0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+  100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
 }
 
-@media (max-width: 768px) {
+/* Responsividade */
 
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
-    height: auto;
+    padding: 20px 10px;
   }
+
   .sidebar {
     flex: 0 0 auto;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
-  }
-  .content {
-    justify-content: center !important;
-    padding: 10px;
-  }
-
-  .container {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 10px;
-    
-  }
-
-  .presentation, .projects {
-    flex: 1 1 auto;
-    width: 100%;
-    
-  }
-
-  .projects {
-    margin-top: 20px;
+    gap: 10px;
   }
 
   .menu {
-    position: relative;
-    top: auto;
-    left: auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
+  }
+
+  .projects {
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: none;
   }
 
   #wai {
@@ -239,7 +227,18 @@ body {
     margin-bottom: 20px;
   }
 
-  
+  .projects-panel {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+  }
+
+  .animation-container {
+    width: 90vw;
+    height: 90vw;
+  }
 }
 
 @media (max-width: 480px) {
@@ -254,24 +253,11 @@ body {
   #wai h2 {
     font-size: 0.875rem;
   }
+
+  .presentation-div {
+    width: 90%;
+    font-size: 0.7rem;
+    bottom: 10px;
+    right: 5%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
