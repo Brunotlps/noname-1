@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import p5 from 'p5';
 
-export default function Animation() {
+export default function Animation({ className }) {
   const containerRef = useRef(null);
   const p5InstanceRef = useRef(null);
   const intervalRef = useRef(null);
@@ -94,5 +94,5 @@ export default function Animation() {
     };
   }, []);
 
-  return <div ref={containerRef} className="animation" />;
+  return <div ref={containerRef} className={`${className} animation`} />;
 }

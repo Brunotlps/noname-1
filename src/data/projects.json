@@ -1,11 +1,5 @@
 [
-    {
-      "title": "Projeto Portfolio",
-      "desc": "Portfólio pessoal criado com Next.js, animações com p5.js e estrutura modular."
-    },
-    {
-      "title": "Dupla de Milheiros",
-      "desc": "Página institucional para mentoria financeira, feita com Django e Bootstrap."
-    }
-  ]
-  
+  { "title": "Chat em Sockets", "desc": "Projeto de chat online com sockets e Tkinter." },
+  { "title": "Chat em Sockets", "desc": "Projeto de chat online com sockets e Tkinter." },
+  { "title": "Dupla de Milheiros", "desc": "Site de mentoria financeira desenvolvido com Django e Bootstrap." }
+]
