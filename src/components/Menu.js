@@ -1,14 +1,26 @@
 'use client';
 
-export default function Menu({ onHome, onProjects }) {
+export default function Menu({ onHome, onProjects, onContact, activeSection }) {
   return (
-    <nav className="menu">
-      <button className="menu-button" onClick={onHome}>
+    <div className="menu">
+      <button
+        onClick={onHome}
+        className={`menu-button ${activeSection === 'home' ? 'active' : ''}`}
+      >
         Home
       </button>
-      <button className="menu-button" onClick={onProjects}>
+      <button
+        onClick={onProjects}
+        className={`menu-button ${activeSection === 'projects' ? 'active' : ''}`}
+      >
         Projects
       </button>
-    </nav>
+      <button
+        onClick={onContact}
+        className={`menu-button ${activeSection === 'contact' ? 'active' : ''}`}
+      >
+        Info
+      </button>
+    </div>
   );
 }

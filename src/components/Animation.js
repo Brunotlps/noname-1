@@ -12,9 +12,9 @@ export default function Animation({ className }) {
     // Define aqui todo o seu sketch, mas usando a instância s
     const sketch = (s) => {
       let points = [];
-      const minPoints = 10;
-      const maxPoints = 20;
-      const maxDistance = 70;
+      const minPoints = 70;
+      const maxPoints = 120;
+      const maxDistance = 110;
 
       class Point {
         constructor(x, y) {
@@ -62,12 +62,12 @@ export default function Animation({ className }) {
       }
 
       s.setup = () => {
-        s.createCanvas(200, 200).parent(containerRef.current);
+        s.createCanvas(400, 300).parent(containerRef.current);
         const initial = s.floor(s.random(minPoints, maxPoints));
         for (let i = 0; i < initial; i++) {
           points.push(new Point(s.random(s.width), s.random(s.height)));
         }
-        intervalRef.current = setInterval(adjustPoints, 5000);
+        intervalRef.current = setInterval(adjustPoints, 10000);
       };
 
       s.draw = () => {

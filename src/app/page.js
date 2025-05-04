@@ -1,13 +1,16 @@
+// page.js
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Menu from '../components/Menu';
 import Projects from '../components/Projects';
 import Animation from '../components/ClientOnlyAnimation'; 
 import Presentation from '@/components/Presentation';
+import Contact from '@/components/Contact'; // Novo componente
 
 export default function Home() {
-  const [showProjects, setShowProjects] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   return (
     <div className="container">
@@ -18,8 +21,10 @@ export default function Home() {
       
       <aside className='sidebar'>
         <Menu
-          onHome={() => setShowProjects(false)}
-          onProjects={() => setShowProjects(true)}
+          onHome={() => setActiveSection('home')}
+          onProjects={() => setActiveSection('projects')}
+          onContact={() => setActiveSection('contact')}
+          activeSection={activeSection}
         />
       </aside>
 
@@ -27,16 +32,44 @@ export default function Home() {
         <Animation />
       </main>
 
-      {showProjects ? (
-        <div className="projects-panel">
-          <Projects />
-        </div>
-      ) : (
-        <div className="presentation-div">
-          <Presentation />
-        </div>
-)} 
-     
+      <AnimatePresence mode="wait">
+        {activeSection === 'projects' && (
+          <motion.div
+            key="projects"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="projects-panel"
+          >
+            <Projects />
+          </motion.div>
+        )}
+        {activeSection === 'contact' && (
+          <motion.div
+            key="contact"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="contact"
+          >
+            <Contact />
+          </motion.div>
+        )}
+        {activeSection === 'home' && (
+          <motion.div
+            key="presentation"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="presentation-div"
+          >
+            <Presentation />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
