@@ -27,7 +27,7 @@ export default function Animation({ className }) {
           if (this.pos.y < 0 || this.pos.y > s.height) this.vel.y *= -1;
         }
         display() {
-          s.fill(173, 216, 230, 200);
+          s.fill(255, 255, 255, 180);
           s.noStroke();
           s.ellipse(this.pos.x, this.pos.y, 6, 6);
         }
@@ -44,7 +44,7 @@ export default function Animation({ className }) {
               const alpha = s.map(
                 s.sin(s.frameCount * 0.05), -1, 1, 50, 150
               );
-              s.stroke(173, 216, 230, alpha);
+              s.stroke(200, 200, 200, alpha);
               s.strokeWeight(s.map(d, 0, maxDistance, 1.5, 0.2));
               s.line(
                 points[i].pos.x, points[i].pos.y,

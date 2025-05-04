@@ -45,10 +45,11 @@ body {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  width: 200px;
+  width: 300px;
   padding: 10px;
   color: whitesmoke; 
-  font-size: 0.75rem;
+  text-align: justify;
+  font-size: 0.85rem;
   border-radius: 8px;
   z-index: 1;
 }
@@ -114,6 +115,7 @@ body {
 }
 
 .menu-button.active {
+  color: bisque;
   text-decoration: line-through;
 }
 
@@ -186,6 +188,40 @@ body {
 .projects::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
+}
+
+.contact {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  color: whitesmoke;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-text {
+  max-width: 100%;
+  text-align: justify;
+  font-size: 0.85rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.0rem;
+}
+
+.social-links a {
+  color: whitesmoke;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  color: bisque;
 }
 
 @keyframes glow {

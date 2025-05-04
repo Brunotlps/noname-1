@@ -19,7 +19,7 @@ export default function Menu({ onHome, onProjects, onContact, activeSection }) {
         onClick={onContact}
         className={`menu-button ${activeSection === 'contact' ? 'active' : ''}`}
       >
-        Info
+        Contact
       </button>
     </div>
   );

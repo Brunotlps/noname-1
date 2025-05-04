@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Bruno Teixeira',
+  title: 'Bruno',
   description: 'Projetos e experiências de Bruno',
   icons: {
     icon: '/favicon.png',

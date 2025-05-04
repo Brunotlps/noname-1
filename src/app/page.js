@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="container">
       <header id="wai">
-        <h1>Bruno Teixeira</h1>
+        <h1>Bruno Teixeira Lopes</h1>
         <h2>Software Developer</h2>
       </header>
       
