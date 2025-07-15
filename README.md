@@ -36,10 +36,10 @@ Um portfólio moderno e interativo desenvolvido com Next.js 15, React 19 e Frame
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+git clone https://github.com/Brunotlps/noname-1.git
 
 # Entre no diretório
-cd SEU_REPOSITORIO
+cd noname-1
 
 # Instale as dependências
 npm install
@@ -147,7 +147,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 👤 Autor
 
 **Bruno Teixeira Lopes**
-- GitHub: [@SEU_USUARIO](https://github.com/Brunotlpsnoname-1
+- GitHub: [@Brunotlps](https://github.com/Brunotlps)
 - LinkedIn: [Bruno Teixeira Lopes](https://linkedin.com/in/brunotlps)
 - Email: seu.email@exemplo.com
 
@@ -161,9 +161,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 ⭐ Se este projeto te ajudou, deixe uma estrela!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
