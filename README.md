@@ -1,33 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Bruno Teixeira Lopes - Portfolio
 
-## Getting Started
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Brunotlps/noname-1)
 
-First, run the development server:
+Um portfólio moderno e interativo desenvolvido com Next.js 15, React 19 e Framer Motion. Apresenta animações fluidas, design responsivo e uma experiência de usuário envolvente.
+
+## 🖥️ Demo
+
+[Ver Portfolio Online](https://SEU_DOMINIO.vercel.app)
+
+## ✨ Características
+
+- **🎨 Design Moderno**: Interface limpa e profissional com gradientes e animações
+- **📱 Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **🎬 Animações Fluidas**: Transições suaves usando Framer Motion
+- **⚡ Performance**: Built com Next.js 15 para máxima velocidade
+- **🎯 Navegação Intuitiva**: Menu lateral com estados ativos
+- **🌟 Animações Interativas**: Elementos animados com p5.js
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: Next.js 15, React 19
+- **Animações**: Framer Motion, p5.js
+- **Estilização**: CSS Modules, CSS Grid/Flexbox
+- **Ícones**: React Icons
+- **Deploy**: Vercel
+
+## 🚀 Instalação e Uso
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+
+### Executar localmente
 
 ```bash
+# Clone o repositório
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+# Entre no diretório
+cd SEU_REPOSITORIO
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── layout.js          # Layout principal
+│   └── page.js            # Página inicial
+├── components/
+│   ├── Animation.js       # Animações p5.js
+│   ├── ClientOnlyAnimation.js
+│   ├── Contact.js         # Seção de contato
+│   ├── Menu.js            # Navegação lateral
+│   ├── Presentation.js    # Apresentação pessoal
+│   └── Projects.js        # Galeria de projetos
+├── data/
+│   └── projects.json      # Dados dos projetos
+└── styles/
+    └── globals.css        # Estilos globais
+```
 
-## Learn More
+## 🎯 Seções do Portfolio
 
-To learn more about Next.js, take a look at the following resources:
+1. **Home**: Apresentação pessoal com animações interativas
+2. **Projects**: Galeria de projetos com descrições e links
+3. **Contact**: Informações de contato e redes sociais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deploy na Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Método 1: Deploy Automático (Recomendado)
+
+1. Faça push do código para o GitHub
+2. Conecte sua conta GitHub à Vercel
+3. Importe o repositório na Vercel
+4. A Vercel detectará automaticamente que é um projeto Next.js
+5. Deploy será feito automaticamente
+
+### Método 2: Vercel CLI
+
+```bash
+# Instale a CLI da Vercel
+npm i -g vercel
+
+# Execute o deploy
+vercel
+```
+
+## 🔧 Scripts Disponíveis
+
+```bash
+npm run dev      # Servidor de desenvolvimento
+npm run build    # Build para produção
+npm run start    # Servidor de produção
+npm run lint     # Verificar código
+```
+
+## 🎨 Customização
+
+### Projetos
+Edite o arquivo `src/data/projects.json` para adicionar/remover projetos:
+
+```json
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Seu Projeto",
+      "description": "Descrição do projeto",
+      "technologies": ["React", "Next.js"],
+      "github": "link-github",
+      "demo": "link-demo"
+    }
+  ]
+}
+```
+
+### Estilos
+Modifique `src/styles/globals.css` para personalizar:
+- Cores e gradientes
+- Fontes
+- Animações
+- Layout responsivo
+
+## 🐛 Relatório de Bugs
+
+Encontrou um bug? Abra uma [issue](https://github.com/Brunotlps/noname-1/issues) descrevendo:
+- Passos para reproduzir
+- Comportamento esperado
+- Comportamento atual
+- Screenshots (se aplicável)
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👤 Autor
+
+**Bruno Teixeira Lopes**
+- GitHub: [@SEU_USUARIO](https://github.com/Brunotlpsnoname-1
+- LinkedIn: [Bruno Teixeira Lopes](https://linkedin.com/in/brunotlps)
+- Email: seu.email@exemplo.com
+
+## 🙏 Agradecimentos
+
+- [Next.js](https://nextjs.org/) pela incrível framework
+- [Framer Motion](https://www.framer.com/motion/) pelas animações
+- [Vercel](https://vercel.com/) pelo hosting gratuito
+- [p5.js](https://p5js.org/) pelas animações interativas
+
+---
+
+⭐ Se este projeto te ajudou, deixe uma estrela!
 
 ## Deploy on Vercel
 
