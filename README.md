@@ -76,25 +76,6 @@ src/
 2. **Projects**: Galeria de projetos com descrições e links
 3. **Contact**: Informações de contato e redes sociais
 
-## 🚀 Deploy na Vercel
-
-### Método 1: Deploy Automático (Recomendado)
-
-1. Faça push do código para o GitHub
-2. Conecte sua conta GitHub à Vercel
-3. Importe o repositório na Vercel
-4. A Vercel detectará automaticamente que é um projeto Next.js
-5. Deploy será feito automaticamente
-
-### Método 2: Vercel CLI
-
-```bash
-# Instale a CLI da Vercel
-npm i -g vercel
-
-# Execute o deploy
-vercel
-```
 
 ## 🔧 Scripts Disponíveis
 
@@ -104,33 +85,6 @@ npm run build    # Build para produção
 npm run start    # Servidor de produção
 npm run lint     # Verificar código
 ```
-
-## 🎨 Customização
-
-### Projetos
-Edite o arquivo `src/data/projects.json` para adicionar/remover projetos:
-
-```json
-{
-  "projects": [
-    {
-      "id": 1,
-      "title": "Seu Projeto",
-      "description": "Descrição do projeto",
-      "technologies": ["React", "Next.js"],
-      "github": "link-github",
-      "demo": "link-demo"
-    }
-  ]
-}
-```
-
-### Estilos
-Modifique `src/styles/globals.css` para personalizar:
-- Cores e gradientes
-- Fontes
-- Animações
-- Layout responsivo
 
 ## 🐛 Relatório de Bugs
 
@@ -150,13 +104,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - GitHub: [@Brunotlps](https://github.com/Brunotlps)
 - LinkedIn: [Bruno Teixeira Lopes](https://linkedin.com/in/brunotlps)
 - Email: brunoteixlps@gmail.com
-
-## 🙏 Agradecimentos
-
-- [Next.js](https://nextjs.org/) pela incrível framework
-- [Framer Motion](https://www.framer.com/motion/) pelas animações
-- [Vercel](https://vercel.com/) pelo hosting gratuito
-- [p5.js](https://p5js.org/) pelas animações interativas
 
 ---
 
