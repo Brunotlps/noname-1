@@ -149,7 +149,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **Bruno Teixeira Lopes**
 - GitHub: [@Brunotlps](https://github.com/Brunotlps)
 - LinkedIn: [Bruno Teixeira Lopes](https://linkedin.com/in/brunotlps)
-- Email: [brunoteixlps@gmail.com]
+- Email: brunoteixlps@gmail.com
 
 ## 🙏 Agradecimentos
 
